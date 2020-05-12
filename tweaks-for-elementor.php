@@ -9,7 +9,7 @@
  * Plugin Name:       Tweaks for Elementor
  * Plugin URI:        https://wordpress.org/plugins/tweaks-for-elementor/
  * Description:       Development in progress
- * Version:           0.0.1
+ * Version:           1.0.0
  * Author:            WPBRO - Dima Minka
  * Author URI:        https://wpbro.ru
  * License:           GPL-2.0+
@@ -23,7 +23,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION', '0.0.1' );
+define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION', '1.0.0' );
 define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG', 'Tweaks_For_Elementor' );
 define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_FILE', __FILE__ );
 define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_DIR', trailingslashit( __DIR__ ) );

@@ -4,16 +4,15 @@ Donate link: https://www.paypal.me/cdkdev
 Tags: elementor, seo, optimization, speed, design, tweaks
 Requires at least: 5.0
 Tested up to: 5.4.1
-Stable tag: 0.0.1
+Stable tag: 1.0.0
 Requires PHP: 5.6.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Development in progress
+Tweaks for Elementor
 
 == Description ==
-
-Development in progress
+Tweaks for Elementor is simple plugin with few features to disable the default Fonts and CSS files of Elementor and Hello Elementor Theme
 
 == Installation ==
 
@@ -39,15 +38,17 @@ Development in progress
 
 == Frequently Asked Questions ==
 
-Development in progress
+= The tweaks not working on the frontend side =
+
+Most of tweaks based on css, so if you don't see any changes on the frontend side, try to regenerate the files via Elementor Tool
 
 == Screenshots ==
 
-1. Development in progress
+1. Tweaks for Elementor Settings screen
 
 == Changelog ==
 
-= 0.0.1 (12.05.2020) =
+= 1.0.0 (12.05.2020) =
 * Plugin init
 
 == Upgrade Notice ==
