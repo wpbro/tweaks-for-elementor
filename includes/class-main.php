@@ -41,7 +41,6 @@ class Main {
 	 * Register hooks.
 	 */
 	public function hooks() {
-		add_action( 'elementor/frontend/before_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'tweak_enqueue_scripts' ) );
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'tweak_icon_styles' ), 20 );
 	}
@@ -56,19 +55,6 @@ class Main {
 	 */
 	public function get_option( $key, $default = false ) {
 		return get_option( 'elementor_' . WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_' . $key, $default );
-	}
-
-	/**
-	 * Add required scripts.
-	 */
-	public function enqueue_scripts() {
-		wp_enqueue_script(
-			WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_app',
-			WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'frontend/js/app.js',
-			array( 'jquery', 'elementor-frontend' ),
-			filemtime( WPBRO_TWEAKS_FOR_ELEMENTOR_DIR . 'frontend/js/app.js' ),
-			true
-		);
 	}
 
 	/**
