@@ -47,8 +47,10 @@ Tweaks for Elementor is simple plugin with few features to disable the default F
 
 ##### 1.0.1 (13.05.2020)
 * Fix: banner for wp.org
-* Fix: readme.txt changes 
+* Fix: readme.txt changes
+* New: Manual activation link
 * Tweak: Admin meta with link to GitHub repository
+* Tweak: Meta to plugin settings
 
 ##### 1.0.0 (12.05.2020)
 * Plugin init
