@@ -7,6 +7,8 @@
 
 namespace WPBRO\Tweaks_For_Elementor;
 
+use Elementor\Settings;
+
 /**
  * Class Admin
  *
@@ -19,6 +21,7 @@ class Admin {
 	 */
 	public function __construct() {
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
+		add_filter( 'plugin_action_links_' . WPBRO_TWEAKS_FOR_ELEMENTOR_BASE, [ $this, 'plugin_action_links' ] );
 	}
 
 	/**
@@ -28,7 +31,7 @@ class Admin {
 	 *
 	 * Fired by `plugin_row_meta` filter.
 	 *
-	 * @since 1.1.4
+	 * @since 1.0.1
 	 * @access public
 	 *
 	 * @param array  $plugin_meta An array of the plugin's metadata, including
@@ -50,6 +53,28 @@ class Admin {
 		return $plugin_meta;
 	}
 
+	/**
+	 * Plugin action links.
+	 *
+	 * Adds action links to the plugin list table
+	 *
+	 * Fired by `plugin_action_links` filter.
+	 *
+	 * @since 1.0.1
+	 * @access public
+	 *
+	 * @param array $links An array of plugin action links.
+	 *
+	 * @return array An array of plugin action links.
+	 */
+	public function plugin_action_links( $links ) {
+		$tweaks_for_elementor_url = 'admin.php?page=' . Settings::PAGE_ID . '#tab-Tweaks_For_Elementor';
+		$settings_link            = sprintf( '<a href="%1$s">%2$s</a>', admin_url( $tweaks_for_elementor_url ), __( 'Settings', 'elementor' ) );
+
+		array_unshift( $links, $settings_link );
+
+		return $links;
+	}
 }
 
 // eol.
