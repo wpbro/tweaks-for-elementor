@@ -72,7 +72,7 @@ class Main {
 			 *
 			 * @param bool print_google_fonts Whether to enqueue Google fonts. Default is true.
 			 *
-			 * @since 1.0.0
+			 * @since 1.0.1
 			 */
 			add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
 		}
@@ -112,7 +112,7 @@ class Main {
 			 *
 			 * Fired by `wp_enqueue_scripts` action.
 			 *
-			 * @since 1.0.0
+			 * @since 1.0.1
 			 * @access public
 			 */
 			$elementor_icons = $this->get_option( 'elementor_icons' );

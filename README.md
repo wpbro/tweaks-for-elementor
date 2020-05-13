@@ -4,7 +4,7 @@
 - Tags: elementor, seo, optimization, speed, design, tweaks
 - Requires at least: 5.0
 - Tested up to: 5.4.1
-- Stable tag: 1.0.0
+- Stable tag: 1.0.1
 - Requires PHP: 5.6.20
 - License: GPLv2 or later
 - License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -45,8 +45,20 @@ Tweaks for Elementor is simple plugin with few features to disable the default F
 
 ### Changelog
 
+##### 1.0.1 (13.05.2020)
+* Fix: banner for wp.org
+* Fix: readme.txt changes 
+* Tweak: Admin meta with link to GitHub repository
+
 ##### 1.0.0 (12.05.2020)
 * Plugin init
+
+* Tweak: Minor UI improvement in Slider Control
+* Tweak: Added support for range handles in Slider Control
+* Fix: Stretch Inner Section in the editor ([#7430](https://github.com/elementor/elementor/issues/7430))
+* Fix: Ensure print order of Elementor config JS variables ([#7443](https://github.com/elementor/elementor/issues/7443))
+* Fix: Inline elements not working on new pages ([#7433](https://github.com/elementor/elementor/issues/7433))
+* Fix: Removed media `id` when attachment is missing
 
 ### Upgrade Notice
 You should update for better plugin work
