@@ -52,6 +52,7 @@ Most of tweaks based on css, so if you don't see any changes on the frontend sid
 * Fix: banner for wp.org
 * Fix: readme.txt changes
 * Tweak: Admin meta with link to GitHub repository
+* Tweak: Meta to plugin settings
 
 = 1.0.0 (12.05.2020) =
 * Plugin init
