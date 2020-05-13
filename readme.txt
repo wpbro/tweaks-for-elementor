@@ -1,5 +1,5 @@
 === Tweaks for Elementor ===
-Contributors: Dima Minka, WPBRO, CDK, donatory
+Contributors: CDK Comp, mihdan
 Donate link: https://www.paypal.me/cdkdev
 Tags: elementor, seo, optimization, speed, design, tweaks
 Requires at least: 5.0
