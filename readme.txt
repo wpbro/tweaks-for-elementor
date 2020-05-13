@@ -51,6 +51,7 @@ Most of tweaks based on css, so if you don't see any changes on the frontend sid
 = 1.0.1 (13.05.2020) =
 * Fix: banner for wp.org
 * Fix: readme.txt changes
+* New: Manual activation link
 * Tweak: Admin meta with link to GitHub repository
 * Tweak: Meta to plugin settings
 
