@@ -21,7 +21,7 @@ class Admin {
 	 */
 	public function __construct() {
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
-		add_filter( 'plugin_action_links_' . WPBRO_TWEAKS_FOR_ELEMENTOR_BASE, [ $this, 'plugin_action_links' ] );
+		add_filter( 'plugin_action_links_' . WPBRO_TWEAKS_FOR_ELEMENTOR_BASE, array( $this, 'plugin_action_links' ) );
 	}
 
 	/**
@@ -43,9 +43,9 @@ class Admin {
 	 */
 	public function plugin_row_meta( $plugin_meta, $plugin_file ) {
 		if ( WPBRO_TWEAKS_FOR_ELEMENTOR_BASE === $plugin_file ) {
-			$row_meta = [
+			$row_meta = array(
 				'github' => '<a href="https://github.com/wpbro/tweaks-for-elementor" aria-label="' . esc_attr( __( 'GitHub', 'elementor' ) ) . '" target="_blank">' . __( 'GitHub', 'tweaks-for-elementor' ) . '</a>',
-			];
+			);
 
 			$plugin_meta = array_merge( $plugin_meta, $row_meta );
 		}
