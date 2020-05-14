@@ -107,7 +107,7 @@ class Options {
 								'label'      => __( 'License settings', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'type' => 'raw_html',
-									'html' => sprintf( '<button class="button elementor-button-spinner">%s</button>', __( 'Activate Manually', 'tweaks-for-elementor' ) ),
+									'html' => sprintf( '<a class="button elementor-button-spinner" href="admin.php?page=elementor-license&mode=manually">%s</a>', __( 'Activate Manually', 'tweaks-for-elementor' ) ),
 								),
 							),
 						),
