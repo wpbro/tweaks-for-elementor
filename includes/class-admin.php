@@ -62,8 +62,8 @@ class Admin {
 	 *
 	 */
 	public function plugin_action_links(array $links) {
-		$tweaks_for_elementor_url = 'admin.php?page=' . Settings::PAGE_ID . '#tab-Intl_Tel_For_Elementor';
-		$settings_link            = sprintf( '<a href="%1$s">%2$s</a>', admin_url( $tweaks_for_elementor_url ), __( 'Settings', 'elementor' ) );
+		$intl_for_elementor_url = 'admin.php?page=' . Settings::PAGE_ID . '#tab-Intl_Tel_For_Elementor';
+		$settings_link            = sprintf( '<a href="%1$s">%2$s</a>', admin_url( $intl_for_elementor_url ), __( 'Settings', 'elementor' ) );
 
 		array_unshift( $links, $settings_link );
 
