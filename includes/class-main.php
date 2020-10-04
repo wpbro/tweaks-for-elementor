@@ -45,7 +45,7 @@ class Main {
 	 * @param false $default for default value.
 	 * @return false|mixed|void
 	 */
-	public function get_option(string $key, $default = false ) {
+	public function get_option( string $key, $default = false ) {
 		return get_option( 'elementor_' . INTL_FOR_ELEMENTOR_SLUG . '_' . $key, $default );
 	}
 
@@ -54,21 +54,37 @@ class Main {
 	 */
 	public function intl_enqueue_scripts() {
 
-		wp_enqueue_style(
-			INTL_FOR_ELEMENTOR_SLUG . '_style',
-			INTL_FOR_ELEMENTOR_URL . 'dist/style.css',
-			array(),
-			INTL_FOR_ELEMENTOR_VERSION,
-			'all'
-		);
+		$api_key = $this->get_option( 'ip_info_api_key' );
+		$country_id = $this->get_option( 'custom_country_id' );
+		$data = [];
+		if ( !empty( $api_key ) or !empty( $country_id ) ) {
+			wp_enqueue_style(
+				INTL_FOR_ELEMENTOR_SLUG . '-style',
+				INTL_FOR_ELEMENTOR_URL . 'dist/style.css',
+				array(),
+				INTL_FOR_ELEMENTOR_VERSION,
+				'all'
+			);
 
-		wp_enqueue_script(
-			INTL_FOR_ELEMENTOR_SLUG . '_script',
-			INTL_FOR_ELEMENTOR_URL . 'dist/script.js',
-			array(),
-			INTL_FOR_ELEMENTOR_VERSION,
-			true
-		);
+			wp_enqueue_script(
+				INTL_FOR_ELEMENTOR_SLUG . '-script',
+				INTL_FOR_ELEMENTOR_URL . 'dist/script.js',
+				array(),
+				INTL_FOR_ELEMENTOR_VERSION,
+				true
+			);
+
+			if ( !empty( $api_key ) ) {
+				$data['apiKey'] = $api_key;
+			}
+			if ( !empty( $country_id ) ) {
+				$data['customCountryId'] = $country_id;
+			}
+			wp_localize_script(
+				INTL_FOR_ELEMENTOR_SLUG . '-script', 'intlElementorData',
+				$data
+			);
+		}
 	}
 
 }
