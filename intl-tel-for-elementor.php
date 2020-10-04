@@ -17,6 +17,7 @@
  * Text Domain:       intl-tel-for-elementor
  * Domain Path:       /languages
  */
+
 namespace INTL\Tel_For_Elementor;
 
 if ( ! defined( 'WPINC' ) ) {
@@ -33,9 +34,9 @@ define( 'INTL_FOR_ELEMENTOR_URL', plugin_dir_url( INTL_FOR_ELEMENTOR_FILE ) );
 /**
  * Load gettext translate for our text domain.
  *
+ * @return void
  * @since 1.1
  *
- * @return void
  */
 function Intl_Tel_For_Elementor() {
 
@@ -61,13 +62,13 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\Intl_Tel_For_Elementor' );
 /**
  * Show in WP Dashboard notice about the plugin is not activated.
  *
+ * @return void
  * @since 1.1
  *
- * @return void
  */
 function Intl_Tel_For_Elementor_fail_load() {
 	$message = sprintf(
-		/* translators: 1: Plugin name 2: Elementor */
+	/* translators: 1: Plugin name 2: Elementor */
 		esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'intl-tel-for-elementor' ),
 		'<strong>' . esc_html__( 'Intl Tel for Elementor', 'intl-tel-for-elementor' ) . '</strong>',
 		'<strong>' . esc_html__( 'Elementor', 'intl-tel-for-elementor' ) . '</strong>'

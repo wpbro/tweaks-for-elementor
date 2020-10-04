@@ -35,7 +35,7 @@ class Admin {
 	 * @since 1.0.0
 	 * @access public
 	 */
-	public function plugin_row_meta(array $plugin_meta, string $plugin_file) {
+	public function plugin_row_meta( array $plugin_meta, string $plugin_file ) {
 		if ( INTL_FOR_ELEMENTOR_BASE === $plugin_file ) {
 			$row_meta = array(
 				'github' => '<a href="https://github.com/cdk-comp/intl-tel-for-elementor" aria-label="' . esc_attr( __( 'GitHub', 'elementor' ) ) . '" target="_blank">' . __( 'GitHub', 'intl-tel-for-elementor' ) . '</a>',
@@ -61,9 +61,9 @@ class Admin {
 	 * @access public
 	 *
 	 */
-	public function plugin_action_links(array $links) {
+	public function plugin_action_links( array $links ) {
 		$intl_for_elementor_url = 'admin.php?page=' . Settings::PAGE_ID . '#tab-Intl_Tel_For_Elementor';
-		$settings_link            = sprintf( '<a href="%1$s">%2$s</a>', admin_url( $intl_for_elementor_url ), __( 'Settings', 'elementor' ) );
+		$settings_link          = sprintf( '<a href="%1$s">%2$s</a>', admin_url( $intl_for_elementor_url ), __( 'Settings', 'elementor' ) );
 
 		array_unshift( $links, $settings_link );
 

@@ -43,18 +43,18 @@ class Options {
 					INTL_FOR_ELEMENTOR_SLUG . '_optimization' => array(
 						'label'  => __( 'Intl Settings', 'intl-tel-for-elementor' ),
 						'fields' => array(
-							INTL_FOR_ELEMENTOR_SLUG . '_ip_info_api_key' => array(
+							INTL_FOR_ELEMENTOR_SLUG . '_ip_info_api_key'   => array(
 								'label'      => __( 'Ipinfo API key', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Key for Ipinfo API', 'intl-tel-for-elementor' ),
-									'type'    => 'text',
+									'desc' => __( 'Key for Ipinfo API', 'intl-tel-for-elementor' ),
+									'type' => 'text',
 								),
 							),
 							INTL_FOR_ELEMENTOR_SLUG . '_custom_country_id' => array(
 								'label'      => __( 'Custom country ID', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Place Country ID e.g. US', 'intl-tel-for-elementor' ),
-									'type'    => 'text',
+									'desc' => __( 'Place Country ID e.g. US', 'intl-tel-for-elementor' ),
+									'type' => 'text',
 								),
 							),
 						),
