@@ -2,18 +2,13 @@
 /**
  * Class options
  *
- * @package tweaks-for-elementor
+ * @package INTL
  */
 
-namespace WPBRO\Tweaks_For_Elementor;
+namespace INTL\Tel_For_Elementor;
 
 use Elementor\Settings;
 
-/**
- * Class Options
- *
- * @package WPBRO\Tweaks_For_Elementor
- */
 class Options {
 
 	/**
@@ -41,73 +36,73 @@ class Options {
 	 */
 	public function register_settings( Settings $settings ) {
 		$settings->add_tab(
-			WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG,
+			INTL_FOR_ELEMENTOR_SLUG,
 			array(
-				'label'    => __( 'Tweaks for Elementor', 'tweaks-for-elementor' ),
+				'label'    => __( 'Intl Tel for Elementor', 'intl-tel-for-elementor' ),
 				'sections' => array(
-					WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_optimization' => array(
-						'label'  => __( 'Optimization tweaks', 'tweaks-for-elementor' ),
+					INTL_FOR_ELEMENTOR_SLUG . '_optimization' => array(
+						'label'  => __( 'Optimization tweaks', 'intl-tel-for-elementor' ),
 						'fields' => array(
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_google_fonts' => array(
-								'label'      => __( 'Deregister google fonts', 'tweaks-for-elementor' ),
+							INTL_FOR_ELEMENTOR_SLUG . '_google_fonts' => array(
+								'label'      => __( 'Deregister google fonts', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Filters whether to enqueue Google fonts in the frontend', 'tweaks-for-elementor' ),
+									'desc'    => __( 'Filters whether to enqueue Google fonts in the frontend', 'intl-tel-for-elementor' ),
 									'type'    => 'select',
 									'options' => array(
-										''     => __( 'No', 'tweaks-for-elementor' ),
-										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+										''     => __( 'No', 'intl-tel-for-elementor' ),
+										'true' => __( 'Yes', 'intl-tel-for-elementor' ),
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_hello_theme'  => array(
-								'label'      => __( 'Deregister themes styles', 'tweaks-for-elementor' ),
+							INTL_FOR_ELEMENTOR_SLUG . '_hello_theme'  => array(
+								'label'      => __( 'Deregister themes styles', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Deregister Hello Elementor theme styles', 'tweaks-for-elementor' ),
+									'desc'    => __( 'Deregister Hello Elementor theme styles', 'intl-tel-for-elementor' ),
 									'type'    => 'select',
 									'options' => array(
-										''     => __( 'No', 'tweaks-for-elementor' ),
-										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+										''     => __( 'No', 'intl-tel-for-elementor' ),
+										'true' => __( 'Yes', 'intl-tel-for-elementor' ),
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_wp_block'     => array(
-								'label'      => __( 'Deregister WP Block styles', 'tweaks-for-elementor' ),
+							INTL_FOR_ELEMENTOR_SLUG . '_wp_block'     => array(
+								'label'      => __( 'Deregister WP Block styles', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Deregister block library and library theme theme styles', 'tweaks-for-elementor' ),
+									'desc'    => __( 'Deregister block library and library theme theme styles', 'intl-tel-for-elementor' ),
 									'type'    => 'select',
 									'options' => array(
-										''     => __( 'No', 'tweaks-for-elementor' ),
-										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+										''     => __( 'No', 'intl-tel-for-elementor' ),
+										'true' => __( 'Yes', 'intl-tel-for-elementor' ),
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_elementor_icons'     => array(
-								'label'      => __( 'Deregister Elementor Icons', 'tweaks-for-elementor' ),
+							INTL_FOR_ELEMENTOR_SLUG . '_elementor_icons'     => array(
+								'label'      => __( 'Deregister Elementor Icons', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Deregister icons font on frontend side only', 'tweaks-for-elementor' ),
+									'desc'    => __( 'Deregister icons font on frontend side only', 'intl-tel-for-elementor' ),
 									'type'    => 'select',
 									'options' => array(
-										''     => __( 'No', 'tweaks-for-elementor' ),
-										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+										''     => __( 'No', 'intl-tel-for-elementor' ),
+										'true' => __( 'Yes', 'intl-tel-for-elementor' ),
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_fa_icons'     => array(
-								'label'      => __( 'Deregister Font Awesome', 'tweaks-for-elementor' ),
+							INTL_FOR_ELEMENTOR_SLUG . '_fa_icons'     => array(
+								'label'      => __( 'Deregister Font Awesome', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc'    => __( 'Deregister font awesome icons on frontend side only', 'tweaks-for-elementor' ),
+									'desc'    => __( 'Deregister font awesome icons on frontend side only', 'intl-tel-for-elementor' ),
 									'type'    => 'select',
 									'options' => array(
-										''     => __( 'No', 'tweaks-for-elementor' ),
-										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+										''     => __( 'No', 'intl-tel-for-elementor' ),
+										'true' => __( 'Yes', 'intl-tel-for-elementor' ),
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_activation_link'     => array(
-								'label'      => __( 'License settings', 'tweaks-for-elementor' ),
+							INTL_FOR_ELEMENTOR_SLUG . '_activation_link'     => array(
+								'label'      => __( 'License settings', 'intl-tel-for-elementor' ),
 								'field_args' => array(
 									'type' => 'raw_html',
-									'html' => sprintf( '<a class="button elementor-button-spinner" href="admin.php?page=elementor-license&mode=manually">%s</a>', __( 'Activate Manually', 'tweaks-for-elementor' ) ),
+									'html' => sprintf( '<a class="button elementor-button-spinner" href="admin.php?page=elementor-license&mode=manually">%s</a>', __( 'Activate Manually', 'intl-tel-for-elementor' ) ),
 								),
 							),
 						),

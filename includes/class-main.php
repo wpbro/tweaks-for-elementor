@@ -2,16 +2,13 @@
 /**
  * Class main
  *
- * @package tweaks-for-elementor
+ * @package INTL
  */
 
-namespace WPBRO\Tweaks_For_Elementor;
+namespace INTL\Tel_For_Elementor;
 
-/**
- * Class Main
- *
- * @package WPBRO\Tweaks_For_Elementor
- */
+use Elementor\Plugin;
+
 class Main {
 
 	/**
@@ -48,13 +45,12 @@ class Main {
 	/**
 	 * Get option value for plugin.
 	 *
-	 * @param void $key tweak settings.
-	 * @param bool $default for default value.
-	 *
-	 * @return bool|mixed|void
+	 * @param string $key tweak settings.
+	 * @param false $default for default value.
+	 * @return false|mixed|void
 	 */
-	public function get_option( $key, $default = false ) {
-		return get_option( 'elementor_' . WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_' . $key, $default );
+	public function get_option(string $key, $default = false ) {
+		return get_option( 'elementor_' . INTL_FOR_ELEMENTOR_SLUG . '_' . $key, $default );
 	}
 
 	/**
@@ -72,7 +68,7 @@ class Main {
 			 *
 			 * @param bool print_google_fonts Whether to enqueue Google fonts. Default is true.
 			 *
-			 * @since 1.0.1
+			 * @since 1.0.0
 			 */
 			add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
 		}
@@ -104,7 +100,7 @@ class Main {
 			wp_dequeue_style( 'wp-block-library' );
 		}
 
-		if ( class_exists( '\Elementor\Plugin' ) && ! \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+		if ( class_exists( '\Elementor\Plugin' ) && ! Plugin::$instance->preview->is_preview_mode() ) {
 			/**
 			 * Deregister styles.
 			 *
@@ -112,7 +108,7 @@ class Main {
 			 *
 			 * Fired by `wp_enqueue_scripts` action.
 			 *
-			 * @since 1.0.1
+			 * @since 1.0.0
 			 * @access public
 			 */
 			$elementor_icons = $this->get_option( 'elementor_icons' );
