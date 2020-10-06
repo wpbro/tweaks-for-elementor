@@ -132,17 +132,17 @@ class Main {
 		if ( ! empty( $api_key ) or ! empty( $country_id ) ) {
 			wp_enqueue_style(
 				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-style',
-				INTL_FOR_ELEMENTOR_URL . 'dist/style.css',
+				WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'dist/style.css',
 				array(),
-				INTL_FOR_ELEMENTOR_VERSION,
+				WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION,
 				'all'
 			);
 
 			wp_enqueue_script(
 				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-script',
-				INTL_FOR_ELEMENTOR_URL . 'dist/script.js',
+				WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'dist/script.js',
 				array(),
-				INTL_FOR_ELEMENTOR_VERSION,
+				WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION,
 				true
 			);
 
