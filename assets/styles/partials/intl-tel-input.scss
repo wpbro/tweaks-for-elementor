@@ -1,0 +1,30 @@
+.iti__flag {
+	background-image: url('images/flags.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.iti__flag {
+		background-image: url('images/flags@2x.png');
+	}
+}
+
+.iti {
+	width: 100%;
+}
+
+[type*=tel].error {
+	box-shadow: 0 0 0 2px red !important;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+	background: transparent !important;
+}
+
+.elementor-button[disabled] {
+	opacity: 0.8;
+	pointer-events: none;
+}
+
+.elementor-form .elementor-help-inline {
+	display: none;
+}

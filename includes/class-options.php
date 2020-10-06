@@ -51,9 +51,9 @@ class Options {
 								),
 							),
 							INTL_FOR_ELEMENTOR_SLUG . '_custom_country_id' => array(
-								'label'      => __( 'Custom country ID', 'intl-tel-for-elementor' ),
+								'label'      => __( 'Custom country ID<br> <small>(will override IP detected)</small>', 'intl-tel-for-elementor' ),
 								'field_args' => array(
-									'desc' => __( 'Place Country ID e.g. US', 'intl-tel-for-elementor' ),
+									'desc' => __( 'Country ID e.g. US', 'intl-tel-for-elementor' ),
 									'type' => 'text',
 								),
 							),
