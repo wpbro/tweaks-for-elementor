@@ -28,6 +28,7 @@ class Options {
 	 */
 	public function hooks() {
 		add_action( 'elementor/admin/after_create_settings/elementor', array( $this, 'register_settings' ) );
+		add_action( 'elementor/admin/after_create_settings/elementor', array( $this, 'register_settings' ) );
 	}
 
 	/**
@@ -40,7 +41,8 @@ class Options {
 	 * @access public
 	 */
 	public function register_settings( Settings $settings ) {
-		$settings->add_tab(
+		$settings
+			->add_tab(
 			WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG,
 			array(
 				'label'    => __( 'Tweaks for Elementor', 'tweaks-for-elementor' ),
@@ -108,6 +110,34 @@ class Options {
 								'field_args' => array(
 									'type' => 'raw_html',
 									'html' => sprintf( '<a class="button elementor-button-spinner" href="admin.php?page=elementor-license&mode=manually">%s</a>', __( 'Activate Manually', 'tweaks-for-elementor' ) ),
+								),
+							),
+						),
+					),
+				),
+			)
+		);
+		$key_intl = WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_intl';
+		$settings->add_tab(
+			$key_intl,
+			array(
+				'label'    => __( 'Intl Tel for Elementor', 'intl-tel-for-elementor' ),
+				'sections' => array(
+					$key_intl . '_optimization' => array(
+						'label'  => __( 'Intl Settings', 'intl-tel-for-elementor' ),
+						'fields' => array(
+							$key_intl . '_ip_info_api_key'   => array(
+								'label'      => __( 'Ipinfo API key', 'intl-tel-for-elementor' ),
+								'field_args' => array(
+									'desc' => __( 'Key for Ipinfo API', 'intl-tel-for-elementor' ),
+									'type' => 'text',
+								),
+							),
+							$key_intl . '_custom_country_id' => array(
+								'label'      => __( 'Custom country ID', 'intl-tel-for-elementor' ),
+								'field_args' => array(
+									'desc' => __( 'Place Country ID e.g. US', 'intl-tel-for-elementor' ),
+									'type' => 'text',
 								),
 							),
 						),
