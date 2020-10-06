@@ -126,12 +126,13 @@ class Main {
 			}
 		}
 
-		$api_key    = $this->get_option( 'ip_info_api_key' );
-		$country_id = $this->get_option( 'custom_country_id' );
+		$api_key    = $this->get_option( 'intl_ip_info_api_key' );
+		$country_id = $this->get_option( 'intl_custom_country_id' );
+
 		$data       = [];
 		if ( ! empty( $api_key ) or ! empty( $country_id ) ) {
 			wp_enqueue_style(
-				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-style',
+				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-intl-style',
 				WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'dist/style.css',
 				array(),
 				WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION,
@@ -139,7 +140,7 @@ class Main {
 			);
 
 			wp_enqueue_script(
-				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-script',
+				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-intl-script',
 				WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'dist/script.js',
 				array(),
 				WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION,
@@ -153,7 +154,7 @@ class Main {
 				$data['customCountryId'] = $country_id;
 			}
 			wp_localize_script(
-				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-script', 'intlElementorData',
+				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-intl-script', 'intlElementorData',
 				$data
 			);
 		}
