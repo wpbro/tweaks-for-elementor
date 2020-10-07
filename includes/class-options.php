@@ -28,7 +28,6 @@ class Options {
 	 */
 	public function hooks() {
 		add_action( 'elementor/admin/after_create_settings/elementor', array( $this, 'register_settings' ) );
-		add_action( 'elementor/admin/after_create_settings/elementor', array( $this, 'register_settings' ) );
 	}
 
 	/**
@@ -41,8 +40,7 @@ class Options {
 	 * @access public
 	 */
 	public function register_settings( Settings $settings ) {
-		$settings
-			->add_tab(
+		$settings->add_tab(
 			WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG,
 			array(
 				'label'    => __( 'Tweaks for Elementor', 'tweaks-for-elementor' ),
