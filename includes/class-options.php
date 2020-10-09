@@ -119,22 +119,22 @@ class Options {
 		$settings->add_tab(
 			$key_intl,
 			array(
-				'label'    => __( 'Intl Tel for Elementor', 'intl-tel-for-elementor' ),
+				'label'    => __( 'Intl Tel for Elementor', 'tweaks-for-elementor' ),
 				'sections' => array(
 					$key_intl . '_optimization' => array(
-						'label'  => __( 'Intl Settings', 'intl-tel-for-elementor' ),
+						'label'  => __( 'Intl Settings', 'tweaks-for-elementor' ),
 						'fields' => array(
 							$key_intl . '_ip_info_api_key'   => array(
-								'label'      => __( 'Ipinfo API key', 'intl-tel-for-elementor' ),
+								'label'      => __( 'Ipinfo API key', 'tweaks-for-elementor' ),
 								'field_args' => array(
-									'desc' => __( 'Key for <a href="https://ipinfo.io/" target="_blank" rel="nofollow">Ipinfo API</a>', 'intl-tel-for-elementor' ),
+									'desc' => __( 'Key for <a href="https://ipinfo.io/" target="_blank" rel="nofollow">Ipinfo API</a>', 'tweaks-for-elementor' ),
 									'type' => 'text',
 								),
 							),
 							$key_intl . '_custom_country_id' => array(
-								'label'      => __( 'Custom country ID <br><small>(will override IP detected)</small>', 'intl-tel-for-elementor' ),
+								'label'      => __( 'Custom country ID <br><small>(will override IP detected)</small>', 'tweaks-for-elementor' ),
 								'field_args' => array(
-									'desc' => __( 'Country Lang Code, e.g. US. More info <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank" rel="nofollow">here</a>', 'intl-tel-for-elementor' ),
+									'desc' => __( 'Country Lang Code, e.g. US. More info <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank" rel="nofollow">here</a>', 'tweaks-for-elementor' ),
 									'type' => 'text',
 								),
 							),
