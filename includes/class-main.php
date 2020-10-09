@@ -131,6 +131,12 @@ class Main {
 
 		$data       = [];
 		if ( ! empty( $api_key ) or ! empty( $country_id ) ) {
+			/**
+			 * Register styles if !empty options intl_ip_info_api_key or intl_custom_country_id
+			 *
+			 * @since 1.0.1
+			 * @access public
+			 */
 			wp_enqueue_style(
 				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-intl-style',
 				WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'dist/style.css',
@@ -138,7 +144,12 @@ class Main {
 				WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION,
 				'all'
 			);
-
+			/**
+			 * Register scripts if !empty options intl_ip_info_api_key or intl_custom_country_id
+			 *
+			 * @since 1.0.1
+			 * @access public
+			 */
 			wp_enqueue_script(
 				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-intl-script',
 				WPBRO_TWEAKS_FOR_ELEMENTOR_URL . 'dist/script.js',
