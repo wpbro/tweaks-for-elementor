@@ -1,3 +1,4 @@
+// Return required cookie value by name
 export default function getCookie(name) {
 	const value = "; " + document.cookie;
 	const parts = value.split("; " + name + "=");

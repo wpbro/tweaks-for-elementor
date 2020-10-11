@@ -4,13 +4,13 @@ import getCountry from '../helpers/get-country';
 
 export default function () {
 
-	const phoneFields = document.querySelectorAll('[type*=tel]');
+	const phoneFields = document.querySelectorAll('[type*=tel]'); //Get all type=tel fields
 
 	getCountry().then((country) => {
-		console.log(country);
-		phoneFields.forEach((field) => intlInit(field, country));
+		phoneFields.forEach((field) => intlInit(field, country)); //Setup intl tel for each type=tel fields
 	})
 
+	//This function init intl tel for each type=tel fields
 	const intlInit = (field, country) => {
 		intlTelInput(field, {
 			separateDialCode: true,
