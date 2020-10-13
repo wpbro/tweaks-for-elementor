@@ -121,7 +121,7 @@ class Options {
 			array(
 				'label'    => __( 'Intl Tel for Elementor', 'tweaks-for-elementor' ),
 				'sections' => array(
-					$key_intl . '_optimization' => array(
+					$key_intl . '_intl_settings' => array(
 						'label'  => __( 'Intl Settings', 'tweaks-for-elementor' ),
 						'fields' => array(
 							$key_intl . '_ip_info_api_key'   => array(
