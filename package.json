@@ -1,0 +1,31 @@
+{
+  "name": "tweeks-for-elementor",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "rmdist": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.*",
+    "browser-sync-webpack-plugin": "2.*",
+    "laravel-mix": "^5.*",
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "intl-tel-input": "^17.0.3"
+  }
+}

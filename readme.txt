@@ -48,6 +48,9 @@ Most of tweaks based on css, so if you don't see any changes on the frontend sid
 
 == Changelog ==
 
+= 1.0.2 (10.10.2020) =
+* Tweak: added intl tel input support with geo detection based on ipinfo.io service
+
 = 1.0.1 (13.05.2020) =
 * Fix: banner for wp.org
 * Fix: readme.txt changes
