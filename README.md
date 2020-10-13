@@ -1,10 +1,10 @@
 # Tweaks for Elementor
 - Contributors: CDK Comp, mihdan
 - Donate link: https://www.paypal.me/cdkdev
-- Tags: elementor, seo, optimization, speed, design, tweaks
+- Tags: elementor, seo, optimization, speed, design, tweaks, intl-tel
 - Requires at least: 5.0
 - Tested up to: 5.4.1
-- Stable tag: 1.0.1
+- Stable tag: 1.0.2
 - Requires PHP: 5.6.20
 - License: GPLv2 or later
 - License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,11 +42,17 @@ Tweaks for Elementor is simple plugin with few features to disable the default F
 ### Screenshots
 1. Tweaks for Elementor Settings screen
 ![screenshoot-1](./assets/screenshot-1.png)
+![screenshoot-2](./assets/screenshot-2.png)
 
 ### Changelog
 
+##### Next tweaks (in progress)
+* disable elementor pro styles and scripts per page/post
+* disable additional scripts from elementor per page/post
+
 ##### 1.0.2 (10.10.2020)
-* Tweak: added intl tel input support with geo detection based on [ipinfo.io](https://ipinfo.io/) service
+* New: added intl tel input support with geo detection based on [ipinfo.io](https://ipinfo.io/) service
+* Fix: On theme style deregister body margin to 0
 
 ##### 1.0.1 (13.05.2020)
 * Fix: banner for wp.org

@@ -9,7 +9,7 @@
  * Plugin Name:       Tweaks for Elementor
  * Plugin URI:        https://wordpress.org/plugins/tweaks-for-elementor/
  * Description:       Tweaks for Elementor is simple plugin with few features to disable the default Fonts and CSS files of Elementor and Hello Elementor Theme
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            WPBRO - Dima Minka
  * Author URI:        https://wpbro.ru
  * License:           GPL-2.0+
@@ -23,7 +23,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION', '1.0.1' );
+define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_VERSION', '1.0.2' );
 define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG', 'Tweaks_For_Elementor' );
 define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_FILE', __FILE__ );
 define( 'WPBRO_TWEAKS_FOR_ELEMENTOR_BASE', plugin_basename( __FILE__ ) );
