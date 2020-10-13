@@ -93,6 +93,7 @@ class Main {
 	 */
 	public function tweak_enqueue_scripts() {
 		$wp_block = $this->get_option( 'wp_block' );
+		$hello_theme  = $this->get_option( 'hello_theme' );
 
 		if ( $wp_block ) {
 			/**
@@ -124,6 +125,16 @@ class Main {
 			if ( $fa_icons ) {
 				wp_deregister_style( 'font-awesome' );
 			}
+		}
+
+		if ( $hello_theme ) {
+			/**
+			 * Add Tweaks CSS styles to a registered stylesheet if theme style disabled.
+			 *
+			 * @since 1.0.1
+			 * @access public
+			 */
+			wp_add_inline_style( 'elementor-frontend', 'body{margin:0}' );
 		}
 
 		$api_key    = $this->get_option( 'intl_ip_info_api_key' );
