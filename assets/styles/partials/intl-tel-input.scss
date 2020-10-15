@@ -24,3 +24,7 @@
 .iti__selected-flag {
 	outline: none;
 }
+
+[type=tel].is-error {
+	border-color: #ff0000 !important;
+}

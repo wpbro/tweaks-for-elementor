@@ -21,10 +21,15 @@ export default function () {
 			placeholderNumberType: 'FIXED_LINE'
 		});
 
-		field.addEventListener('input', () => handleChange(iti, field));
+		field.addEventListener('change', () => handleChange(iti, field)); // Add change event for each tel input
 	}
 
 	function handleChange(iti, input) {
-		input.value = iti.getNumber();
+		const required = input.getAttribute('required');
+		input.value = iti.getNumber(); //Change current number on the formatted version with +
+
+		if(required) { //Change the error class for required field
+			iti.isValidNumber() ? input.classList.remove('is-error') : input.classList.add('is-error');
+		}
 	}
 }
