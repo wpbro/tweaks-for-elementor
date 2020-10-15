@@ -16,6 +16,15 @@
 	box-shadow: 0 0 0 2px red !important;
 }
 
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag,
 .iti--separate-dial-code .iti__selected-flag {
 	background: transparent !important;
+}
+
+.iti__selected-flag {
+	outline: none;
+}
+
+[type=tel].is-error {
+	border-color: #ff0000 !important;
 }
