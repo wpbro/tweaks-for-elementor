@@ -72,7 +72,7 @@ class Main {
 			 *
 			 * @param bool print_google_fonts Whether to enqueue Google fonts. Default is true.
 			 *
-			 * @since 1.0.2
+			 * @since 1.0.2.1
 			 */
 			add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
 		}
@@ -113,7 +113,7 @@ class Main {
 			 *
 			 * Fired by `wp_enqueue_scripts` action.
 			 *
-			 * @since 1.0.2
+			 * @since 1.0.2.1
 			 * @access public
 			 */
 			$elementor_icons = $this->get_option( 'elementor_icons' );
@@ -131,7 +131,7 @@ class Main {
 			/**
 			 * Add Tweaks CSS styles to a registered stylesheet if theme style disabled.
 			 *
-			 * @since 1.0.2
+			 * @since 1.0.2.1
 			 * @access public
 			 */
 			wp_add_inline_style( 'elementor-frontend', 'body{margin:0}' );
@@ -145,7 +145,7 @@ class Main {
 			/**
 			 * Register styles if !empty options intl_ip_info_api_key or intl_custom_country_id
 			 *
-			 * @since 1.0.2
+			 * @since 1.0.2.1
 			 * @access public
 			 */
 			wp_enqueue_style(
@@ -158,7 +158,7 @@ class Main {
 			/**
 			 * Register scripts if !empty options intl_ip_info_api_key or intl_custom_country_id
 			 *
-			 * @since 1.0.2
+			 * @since 1.0.2.1
 			 * @access public
 			 */
 			wp_enqueue_script(
