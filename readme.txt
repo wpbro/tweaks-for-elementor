@@ -53,6 +53,9 @@ Most of tweaks based on css, so if you don't see any changes on the frontend sid
 * disable elementor pro styles and scripts per page/post
 * disable additional scripts from elementor per page/post
 
+= 1.0.2.1 (18.10.2020) =
+* Fix: country code to input and validation error
+
 = 1.0.2 (10.10.2020) =
 * New: added intl tel input support with geo detection based on ipinfo.io service
 * Fix: On theme style deregister body margin to 0
