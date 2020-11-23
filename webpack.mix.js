@@ -42,7 +42,7 @@ mix.js('assets/scripts/script.js','dist/')
 	.copyDirectory('assets/images', 'dist/images');
 
 mix.browserSync({
-	proxy: 'http://test.test',
+	proxy: 'http://bls.test',
 	delay: 500,
 	open: false,
 	files: [
