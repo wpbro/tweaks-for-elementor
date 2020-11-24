@@ -138,6 +138,13 @@ class Options {
 									'type' => 'text',
 								),
 							),
+							$key_intl . '_custom_country_field_name' => array(
+								'label'      => __( 'Custom country field name <br><small>(optional)</small>', 'tweaks-for-elementor' ),
+								'field_args' => array(
+									'desc' => __( 'Add the name of the Elementor form field into which the two-letter country lang code will be inserted', 'tweaks-for-elementor' ),
+									'type' => 'text',
+								),
+							),
 						),
 					),
 				),

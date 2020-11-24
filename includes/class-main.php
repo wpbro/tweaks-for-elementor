@@ -139,6 +139,7 @@ class Main {
 
 		$api_key    = $this->get_option( 'intl_ip_info_api_key' );
 		$country_id = $this->get_option( 'intl_custom_country_id' );
+		$country_field = $this->get_option( 'intl_custom_country_field_name' );
 
 		$data       = [];
 		if ( ! empty( $api_key ) or ! empty( $country_id ) ) {
@@ -174,6 +175,9 @@ class Main {
 			}
 			if ( ! empty( $country_id ) ) {
 				$data['customCountryId'] = $country_id;
+			}
+			if ( ! empty( $country_field ) ) {
+				$data['customCountryField'] = $country_field;
 			}
 			wp_localize_script(
 				WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '-intl-script', 'intlElementorData',
