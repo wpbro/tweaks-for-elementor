@@ -19,13 +19,13 @@
   "devDependencies": {
     "browser-sync": "^2.*",
     "browser-sync-webpack-plugin": "2.*",
-    "laravel-mix": "^5.*",
+    "laravel-mix": "^6.0.27",
     "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "intl-tel-input": "^17.0.3"
   }
 }
