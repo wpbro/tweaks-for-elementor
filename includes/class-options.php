@@ -103,13 +103,6 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_activation_link'     => array(
-								'label'      => __( 'License settings', 'tweaks-for-elementor' ),
-								'field_args' => array(
-									'type' => 'raw_html',
-									'html' => sprintf( '<a class="button elementor-button-spinner" href="admin.php?page=elementor-license&mode=manually">%s</a>', __( 'Activate Manually', 'tweaks-for-elementor' ) ),
-								),
-							),
 						),
 					),
 				),
