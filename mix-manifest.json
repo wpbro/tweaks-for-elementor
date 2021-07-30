@@ -1,4 +1,6 @@
 {
     "/dist/script.js": "/dist/script.js",
-    "/dist/style.css": "/dist/style.css"
+    "/dist/style.css": "/dist/style.css",
+    "/dist/images/flags.png": "/dist/images/flags.png",
+    "/dist/images/flags@2x.png": "/dist/images/flags@2x.png"
 }
