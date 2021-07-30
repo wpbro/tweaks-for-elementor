@@ -20,4 +20,3 @@ dist
 
 .idea/
 /vendor/
-package-lock.json
