@@ -48,7 +48,7 @@ class Options {
 					WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_optimization' => array(
 						'label'  => __( 'Optimization tweaks', 'tweaks-for-elementor' ),
 						'fields' => array(
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_google_fonts' => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_google_fonts'    => array(
 								'label'      => __( 'Deregister google fonts', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'Filters whether to enqueue Google fonts in the frontend', 'tweaks-for-elementor' ),
@@ -59,7 +59,7 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_hello_theme'  => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_hello_theme'     => array(
 								'label'      => __( 'Deregister themes styles', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'Deregister Hello Elementor theme styles', 'tweaks-for-elementor' ),
@@ -70,7 +70,7 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_wp_block'     => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_wp_block'        => array(
 								'label'      => __( 'Deregister WP Block styles', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'Deregister block library and library theme theme styles', 'tweaks-for-elementor' ),
@@ -81,7 +81,7 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_elementor_icons'     => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_elementor_icons' => array(
 								'label'      => __( 'Deregister Elementor Icons', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'Deregister icons font on frontend side only', 'tweaks-for-elementor' ),
@@ -92,7 +92,7 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_fa_icons'     => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_fa_icons'        => array(
 								'label'      => __( 'Deregister Font Awesome', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'Deregister font awesome icons on frontend side only', 'tweaks-for-elementor' ),
@@ -103,7 +103,7 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_admin_notices'     => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_admin_notices'   => array(
 								'label'      => __( 'Remove Admin Header Notices', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'remove_all_actions action', 'tweaks-for-elementor' ),
@@ -112,6 +112,13 @@ class Options {
 										''     => __( 'No', 'tweaks-for-elementor' ),
 										'true' => __( 'Yes', 'tweaks-for-elementor' ),
 									),
+								),
+							),
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_antispam_field'  => array(
+								'label'      => __( 'Set form field name for spam checker', 'tweaks-for-elementor' ),
+								'field_args' => array(
+									'desc' => __( 'example: field=check message, form label=check message, form id=check_message', 'tweaks-for-elementor' ),
+									'type' => 'text',
 								),
 							),
 						),
@@ -128,14 +135,14 @@ class Options {
 					$key_intl . '_intl_settings' => array(
 						'label'  => __( 'Intl Settings', 'tweaks-for-elementor' ),
 						'fields' => array(
-							$key_intl . '_ip_info_api_key'   => array(
+							$key_intl . '_ip_info_api_key'           => array(
 								'label'      => __( 'Ipinfo API key', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc' => __( 'Key for <a href="https://ipinfo.io/" target="_blank" rel="nofollow">Ipinfo API</a>', 'tweaks-for-elementor' ),
 									'type' => 'text',
 								),
 							),
-							$key_intl . '_custom_country_id' => array(
+							$key_intl . '_custom_country_id'         => array(
 								'label'      => __( 'Custom country ID <br><small>(will override IP detected)</small>', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc' => __( 'Country Lang Code, e.g. US. More info <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank" rel="nofollow">here</a>', 'tweaks-for-elementor' ),

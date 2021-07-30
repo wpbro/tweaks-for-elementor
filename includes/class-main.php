@@ -61,8 +61,9 @@ class Main {
 	 * Deregister styles via filters.
 	 */
 	public function tweak_filters() {
-		$google_fonts = $this->get_option( 'google_fonts' );
-		$hello_theme  = $this->get_option( 'hello_theme' );
+		$google_fonts   = $this->get_option( 'google_fonts' );
+		$hello_theme    = $this->get_option( 'hello_theme' );
+		$antispam_field = $this->get_option( 'antispam_field' );
 
 		if ( $google_fonts ) {
 			/**
@@ -86,14 +87,24 @@ class Main {
 			add_filter( 'hello_elementor_enqueue_style', '__return_false' );
 			add_filter( 'hello_elementor_enqueue_theme_style', '__return_false' );
 		}
+
+		if ( $antispam_field ) {
+			/**
+			 * Skip email if spam field value exist
+			 *
+			 * @since 1.0.4
+			 */
+			add_filter( 'pre_wp_mail', array( $this, 'tweak_antispam' ), 10, 2 );
+		}
 	}
 
 	/**
 	 * Dequeue styles and scripts.
 	 */
 	public function tweak_enqueue_scripts() {
-		$wp_block = $this->get_option( 'wp_block' );
-		$hello_theme  = $this->get_option( 'hello_theme' );
+		$wp_block    = $this->get_option( 'wp_block' );
+		$hello_theme = $this->get_option( 'hello_theme' );
+		$spam_field  = $this->get_option( 'antispam_field' );
 
 		if ( $wp_block ) {
 			/**
@@ -137,11 +148,23 @@ class Main {
 			wp_add_inline_style( 'elementor-frontend', 'body{margin:0}' );
 		}
 
-		$api_key    = $this->get_option( 'intl_ip_info_api_key' );
-		$country_id = $this->get_option( 'intl_custom_country_id' );
+		if ( $spam_field ) {
+			/**
+			 * Inline css for spam field visibility
+			 *
+			 * @since 1.0.4
+			 * @access public
+			 */
+			$spam_css   = '{display:none!important}';
+			$spam_class = '.elementor-field-group-' . str_replace( ' ', '_', $spam_field );
+			wp_add_inline_style( 'elementor-frontend', $spam_class . $spam_css );
+		}
+
+		$api_key       = $this->get_option( 'intl_ip_info_api_key' );
+		$country_id    = $this->get_option( 'intl_custom_country_id' );
 		$country_field = $this->get_option( 'intl_custom_country_field_name' );
 
-		$data       = [];
+		$data = [];
 		if ( ! empty( $api_key ) or ! empty( $country_id ) ) {
 			/**
 			 * Register styles if !empty options intl_ip_info_api_key or intl_custom_country_id
@@ -203,6 +226,38 @@ class Main {
 			foreach ( array( 'solid', 'regular', 'brands' ) as $style ) {
 				wp_deregister_style( 'elementor-icons-fa-' . $style );
 			}
+		}
+	}
+
+	/**
+	 * Check if spam message exist and skip wp_mail()
+	 *
+	 * @param $null
+	 * @param array $wp_mail_input
+	 *
+	 * @return bool|mixed
+	 * @since 1.0.4
+	 */
+	public function tweak_antispam( $null, array $wp_mail_input ) {
+		$spam_field = $this->get_option( 'antispam_field' );
+		$spam_check = '';
+
+		// Parse email content by break line
+		$email_content = explode( '<br>', $wp_mail_input['message'] );
+
+		if ( strpos( $wp_mail_input['message'], $spam_field ) !== false ) {
+			foreach ( $email_content as $field ) {
+				if ( strpos( $field, $spam_field ) !== false ) {
+					$spam_value = explode( $spam_field . ':', $field );
+					$spam_check = trim( $spam_value[1] );
+				}
+			}
+		}
+
+		if ( $spam_check ) {
+			return true;
+		} else {
+			return $null;
 		}
 	}
 }
