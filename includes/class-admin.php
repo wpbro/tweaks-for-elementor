@@ -31,7 +31,7 @@ class Admin {
 	 *
 	 * Fired by `plugin_row_meta` filter.
 	 *
-	 * @since 1.0.2.1
+	 * @since 1.0.3
 	 * @access public
 	 *
 	 * @param array  $plugin_meta An array of the plugin's metadata, including
@@ -60,7 +60,7 @@ class Admin {
 	 *
 	 * Fired by `plugin_action_links` filter.
 	 *
-	 * @since 1.0.2.1
+	 * @since 1.0.3
 	 * @access public
 	 *
 	 * @param array $links An array of plugin action links.

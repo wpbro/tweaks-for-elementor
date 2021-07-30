@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/cdkdev
 Tags: elementor, seo, optimization, speed, design, tweaks, intl-tel
 Requires at least: 5.0
 Tested up to: 5.4.1
-Stable tag: 1.0.2.1
+Stable tag: 1.0.3
 Requires PHP: 5.6.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -49,9 +49,8 @@ Most of tweaks based on css, so if you don't see any changes on the frontend sid
 
 == Changelog ==
 
-= Next tweaks (in progress) =
-* disable elementor pro styles and scripts per page/post
-* disable additional scripts from elementor per page/post
+= 1.0.3 (18.10.2020) =
+* New: country code custom field supporting
 
 = 1.0.2.1 (18.10.2020) =
 * Fix: country code to input and validation error
