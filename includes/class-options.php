@@ -103,6 +103,17 @@ class Options {
 									),
 								),
 							),
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_admin_notices'     => array(
+								'label'      => __( 'Remove Admin Header Notices', 'tweaks-for-elementor' ),
+								'field_args' => array(
+									'desc'    => __( 'remove_all_actions action', 'tweaks-for-elementor' ),
+									'type'    => 'select',
+									'options' => array(
+										''     => __( 'No', 'tweaks-for-elementor' ),
+										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+									),
+								),
+							),
 						),
 					),
 				),
