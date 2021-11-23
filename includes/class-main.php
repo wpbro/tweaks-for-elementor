@@ -42,6 +42,7 @@ class Main {
 	 */
 	public function hooks() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'tweak_enqueue_scripts' ) );
+		add_action( 'wp_print_styles', array( $this, 'tweak_dashicons' ), 100 );
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'tweak_icon_styles' ), 20 );
 	}
 
@@ -258,6 +259,18 @@ class Main {
 			return true;
 		} else {
 			return $null;
+		}
+	}
+
+	/**
+	 * Force deregister dashicons.css on frontend side.
+	 *
+	 * @since 1.0.5
+	 */
+	public function tweak_dashicons() {
+		$dashicons = $this->get_option( 'dashicons' );
+		if ( $dashicons ) {
+			wp_deregister_style( 'dashicons' );
 		}
 	}
 }
