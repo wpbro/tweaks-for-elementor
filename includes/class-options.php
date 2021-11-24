@@ -103,7 +103,7 @@ class Options {
 									),
 								),
 							),
-							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_dashicons'        => array(
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_dashicons'       => array(
 								'label'      => __( 'Deregister Dashicons css', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'Force deregister dashicons.css on frontend side', 'tweaks-for-elementor' ),
@@ -118,6 +118,17 @@ class Options {
 								'label'      => __( 'Remove Admin Header Notices', 'tweaks-for-elementor' ),
 								'field_args' => array(
 									'desc'    => __( 'remove_all_actions action', 'tweaks-for-elementor' ),
+									'type'    => 'select',
+									'options' => array(
+										''     => __( 'No', 'tweaks-for-elementor' ),
+										'true' => __( 'Yes', 'tweaks-for-elementor' ),
+									),
+								),
+							),
+							WPBRO_TWEAKS_FOR_ELEMENTOR_SLUG . '_editor_lang'     => array(
+								'label'      => __( 'Unload translations of elementor editor', 'tweaks-for-elementor' ),
+								'field_args' => array(
+									'desc'    => __( 'Used unload_textdomain() for implementation', 'tweaks-for-elementor' ),
 									'type'    => 'select',
 									'options' => array(
 										''     => __( 'No', 'tweaks-for-elementor' ),

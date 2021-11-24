@@ -43,6 +43,7 @@ class Main {
 	public function hooks() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'tweak_enqueue_scripts' ) );
 		add_action( 'wp_print_styles', array( $this, 'tweak_dashicons' ), 100 );
+		add_action( 'plugins_loaded', array( $this, 'unload_textdomain_elementor' ), 100 );
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'tweak_icon_styles' ), 20 );
 	}
 
@@ -271,6 +272,19 @@ class Main {
 		$dashicons = $this->get_option( 'dashicons' );
 		if ( $dashicons ) {
 			wp_deregister_style( 'dashicons' );
+		}
+	}
+
+	/**
+	 * Unload translations of elementor editor.
+	 *
+	 * @since 1.0.5
+	 */
+	public function unload_textdomain_elementor() {
+		$editor_lang = $this->get_option( 'editor_lang' );
+		if ( is_admin() && $editor_lang ) {
+			unload_textdomain( 'elementor' );
+			unload_textdomain( 'elementor-pro' );
 		}
 	}
 }
