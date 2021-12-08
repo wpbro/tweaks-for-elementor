@@ -270,7 +270,7 @@ class Main {
 	 */
 	public function tweak_dashicons() {
 		$dashicons = $this->get_option( 'dashicons' );
-		if ( $dashicons ) {
+		if ( !is_user_logged_in() && $dashicons ) {
 			wp_deregister_style( 'dashicons' );
 		}
 	}
