@@ -6,9 +6,15 @@ export default function () {
 
 	const phoneFields = document.querySelectorAll('[type*=tel]'); //Get all type=tel fields
 	const customCountryField = (typeof intlElementorData !== 'undefined') ? intlElementorData.customCountryField : ''; //Get the custom country field name
-
+	let geoCountry = '';
+	
 	getCountry().then((country) => {
+		geoCountry = country;
 		phoneFields.forEach((field) => intlInit(field, country)); //Setup intl tel for each type=tel fields
+	});
+	
+	jQuery(document).on('elementor/popup/show', (event, id) => { // Support for forms inside popups
+		document.querySelectorAll(`#elementor-popup-modal-${id} [type*=tel]`).forEach((field) => intlInit(field, geoCountry));
 	});
 
 	//This function init intl tel for each type=tel fields
