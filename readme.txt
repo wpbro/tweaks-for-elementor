@@ -1,10 +1,10 @@
 === Tweaks for Elementor ===
-Contributors: CDK Comp, mihdan
+Contributors: CDK Comp, mihdan, savkinshot
 Donate link: https://www.paypal.me/cdkdev
 Tags: elementor, seo, optimization, speed, design, tweaks, intl-tel
 Requires at least: 5.7
-Tested up to: 5.8
-Stable tag: 1.0.5
+Tested up to: 56.0
+Stable tag: 1.0.6
 Requires PHP: 5.6.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -48,6 +48,10 @@ Most of tweaks based on css, so if you don't see any changes on the frontend sid
 2. Intl tel Settings screen
 
 == Changelog ==
+
+= 1.0.6 (30.05.2022) =
+* Tweak: Intl tel input support Elementor Forms in Popup
+* Chore: Checking with the last versions of Elementor Pro, WordPress 6.0
 
 = 1.0.5 (24.11.2021) =
 * New: Force Dashicons deregister on frontend side.
