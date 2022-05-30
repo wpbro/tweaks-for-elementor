@@ -266,7 +266,7 @@ class Main {
 	/**
 	 * Force deregister dashicons.css on frontend side.
 	 *
-	 * @since 1.0.5
+	 * @since 1.0.6
 	 */
 	public function tweak_dashicons() {
 		$dashicons = $this->get_option( 'dashicons' );
@@ -278,7 +278,7 @@ class Main {
 	/**
 	 * Unload translations of elementor editor.
 	 *
-	 * @since 1.0.5
+	 * @since 1.0.6
 	 */
 	public function unload_textdomain_elementor() {
 		$editor_lang = $this->get_option( 'editor_lang' );
