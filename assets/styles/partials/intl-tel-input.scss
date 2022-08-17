@@ -28,3 +28,7 @@
 [type=tel].is-error {
 	border-color: #ff0000 !important;
 }
+
+.iti__flag-container + [name=billing_phone] {
+	padding-left: 46px !important;
+}
