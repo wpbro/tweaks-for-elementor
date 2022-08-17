@@ -4,7 +4,7 @@ import getCountry from '../helpers/get-country';
 
 export default function () {
 
-	const phoneFields = document.querySelectorAll('[type*=tel]'); //Get all type=tel fields
+	const phoneFields = document.querySelectorAll('[type*=tel], [name=billing_phone]'); //Get all type=tel fields
 	const customCountryField = (typeof intlElementorData !== 'undefined') ? intlElementorData.customCountryField : ''; //Get the custom country field name
 	let geoCountry = '';
 	
